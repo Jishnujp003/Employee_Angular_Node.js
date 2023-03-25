@@ -1,0 +1,46 @@
+
+<div class="a">
+    <h1>Login</h1>
+    <div class="form-group">
+        <input type="email" name="email" placeholder="Email" [(ngModel)]="email">
+      </div>
+    <input [(ngModel)]="password" type="password" name="password" placeholder="password">
+    <div>
+    <button  (click)="login()" class="card card-small" tabindex="0">
+        <span>Submit</span><p>{{email}}</p>
+    </button></div>
+
+</div>
+
+<style>
+    .a {
+        position: relative;
+        align-items: center;
+        margin-top: 200px;
+        margin-left: 200px;
+        background-color: antiquewhite;
+        box-shadow: 20px;
+        border-radius: 10px;
+        height: 300px;
+        width: 300px;
+    }
+    h1 {
+        margin-left: 80px;
+    }
+    .a input {
+        margin-top: 20px;
+        margin-left: 20px;
+
+    }
+    .a button {
+        position: relative;
+        margin-top: 40px;
+        margin-left: 20px;
+    }
+    /* body{
+        position: absolute;
+        align-items: center;
+        background-color: rgb(19, 14, 6);
+    } */
+
+</style>

@@ -1,0 +1,26 @@
+.DS_Store
+angular/node_modules
+Node/node_modules
+angular/.angular
+# server/env
+
+
+# local env files
+# client/.env.local
+# client/.env.*.local
+
+# Log files
+angular/npm-debug.log*
+angular/yarn-debug.log*
+angular/yarn-error.log*
+angular/pnpm-debug.log*
+
+# Editor directories and files
+# client/.idea
+# client/.vscode
+# client/*.suo
+# client/*.ntvs*
+# client/*.njsproj
+# client/*.sln
+# client/*.sw?
+# client/Footer
