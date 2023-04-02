@@ -1,0 +1,37 @@
+
+<div class="maindiv">
+    <div class="leftdiv">
+    </div>
+    <div class="rightdiv">
+    <h1>Login</h1>
+    <div>
+        <input [(ngModel)]="first_name" type="first_name" name="first_name" placeholder="first_name">
+      </div>
+      <div>
+        <input [(ngModel)]="last_name" type="last_name" name="last_name" placeholder="last_name">
+      </div>
+    <div>
+        <input type="email" name="email" placeholder="Email" [(ngModel)]="email">
+      </div>
+      <div>
+        <input [(ngModel)]="dob" type="dob" name="dob" placeholder="dob">
+      </div>
+      <div>
+        <input [(ngModel)]="position" type="position" name="position" placeholder="position">
+      </div>
+      <div>
+        <input [(ngModel)]="department" type="department" name="department" placeholder="department">
+      </div>
+      <div>
+        <input [(ngModel)]="password" type="password" name="password" placeholder="password">
+      </div>
+      <div>
+        <input [(ngModel)]="address" type="password" name="password" placeholder="password">
+      </div>
+    <div>
+    <button  (click)="add_emp()" class="card card-small" tabindex="0">
+Submit
+    </button></div>
+</div>
+</div> 
+

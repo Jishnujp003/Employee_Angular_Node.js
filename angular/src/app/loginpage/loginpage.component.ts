@@ -1,8 +1,13 @@
 import { Component } from '@angular/core';
 import { HttpClient, HttpHeaders } from "@angular/common/http";
+import { Router } from '@angular/router';
 
-@Component({ templateUrl: 'login.component.html' })
-export class LoginComponent {
+@Component({
+  selector: 'app-loginpage',
+  templateUrl: './loginpage.component.html',
+  styleUrls: ['./loginpage.component.css']
+})
+export class LoginpageComponent {
   httpOptions = {
     headers: new HttpHeaders({
       'Content-Type':  'application/json',
@@ -12,26 +17,26 @@ export class LoginComponent {
   };
   email: string;
   password: string;
-  constructor(private http: HttpClient) { }
+  loginValid:false;
+  constructor(private http: HttpClient , private router: Router) { }
   login() {
     var email=this.email;
     console.log(this.password);
     var message = 'Hello from Angular!'
-    // this.http.post<any>('http://localhost:5000/login', data)
-    //   .subscribe(response => {
-    //     console.log(response);
-    //   });
     this.http.post("http://localhost:5000/login", {email}).subscribe(
-      // Handle the response from the server
-      (response) => {
-        console.log(response);
+      (response:any) => {
+        console.log(response.rows[0].isadmin)
+        if(response.rows[0].isadmin == 0){
+        this.router.navigateByUrl('/fileupload');
+      }
+      else if(response.rows[0].isadmin == 1)
+      {
+        this.router.navigateByUrl('/addemps');
+      }
       },
-      // Handle errors
       (error) => {
         console.error(error);
       })
-    // // this.http.get("http://localhost:5000/").subscribe(data => {email=this.email;})
-    // // this.http.get(`${this.url}/login?email=${email}`)
-    // );
+
 }
 }

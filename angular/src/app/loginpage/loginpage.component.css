@@ -1,0 +1,40 @@
+    .leftdiv {
+        background-color: rgb(176, 35, 35);
+        display: inline-block;
+        height: 300px;
+        width: 300px;
+        vertical-align: middle;
+    
+    }
+    .rightdiv {
+        display: inline-block;
+        background-color: antiquewhite;
+
+        height: 300px;
+        width: 300px;
+        vertical-align: middle;
+    
+    }
+    .maindiv{
+        margin-top: 20%;
+        background-image: url("../../assets/employee-background-screening.jpg");
+        align-content: center;    
+        width: 600px;    
+        margin-left: 70px;
+    
+    }
+    
+    h1 {
+        margin-left: 80px;
+    }
+    .a input {
+        margin-top: 20px;
+        margin-left: 20px;
+    
+    }
+        .a button {
+            position: relative;
+            margin-top: 40px;
+            margin-left: 20px;
+        }
+
